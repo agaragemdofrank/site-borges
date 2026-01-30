@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Borges Incorporadora | Alto padrão com compromisso</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold: #937435;
+      --gold-soft: #A18D62;
+      --bg: #EBEAE0;
+      --text: #111111;
+      --muted: #4B4B4B;
+      --line: #E6E1D6;
+    }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .font-brand { font-family: Cinzel, serif; }
+  </style>
+</head>
+
+<body class="bg-[color:var(--bg)] text-[color:var(--text)]">
+  <!-- Modal: Google Forms -->
+  <div id="leadModal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/50" data-close="true"></div>
+    <div class="relative max-w-3xl mx-auto mt-6 sm:mt-10 px-4">
+      <div class="rounded-3xl bg-white border border-[color:var(--line)] shadow-xl overflow-hidden">
+        <div class="flex items-center justify-between px-5 py-4 border-b border-[color:var(--line)]">
+          <div>
+            <p class="font-semibold">Solicitar contato</p>
+            <p class="text-sm text-[color:var(--muted)]">Preencha o formulário e nossa equipe retorna em horário comercial.</p>
+          </div>
+          <button id="closeModal" class="rounded-xl px-3 py-2 text-sm font-semibold border border-[color:var(--line)] hover:border-[color:var(--gold-soft)]">
+            Fechar
+          </button>
+        </div>
+
+        <div class="bg-[color:var(--bg)]">
+          <iframe
+            title="Formulário de contato Borges Incorporadora"
+            src="https://docs.google.com/forms/d/e/1FAIpQLScMNdZ0rJfMBDSqGxCEGHG20AlhJz_rJcEgZ0t_Z_ByrGBIhA/viewform?embedded=true"
+            class="w-full"
+            style="height: 78vh; border: 0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="px-5 py-4 border-t border-[color:var(--line)] text-xs text-[color:var(--muted)]">
+          Se preferir, fale diretamente via WhatsApp ou e-mail na seção de contato.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-[color:var(--bg)]/85 border-b border-[color:var(--line)]">
+    <nav class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-3">
+        <img src="assets/logo-borges.png" alt="Borges Incorporadora" class="h-10 w-auto object-contain" />
+        <div class="leading-tight">
+          <div class="font-brand tracking-wide">BORGES</div>
+          <div class="text-xs text-[color:var(--muted)] -mt-0.5">Incorporadora</div>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-[color:var(--gold)]" href="#sobre">Sobre</a>
+        <a class="hover:text-[color:var(--gold)]" href="#servicos">Serviços</a>
+        <a class="hover:text-[color:var(--gold)]" href="#diferenciais">Diferenciais</a>
+        <a class="hover:text-[color:var(--gold)]" href="#portfolio">Portfólio</a>
+        <a class="hover:text-[color:var(--gold)]" href="#contato">Contato</a>
+      </div>
+
+      <button data-open-modal="true"
+         class="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold
+                bg-[color:var(--gold)] text-white hover:opacity-95 transition">
+        Agendar reunião
+      </button>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="max-w-6xl mx-auto px-5 pt-14 pb-10">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-sm font-semibold tracking-wide text-[color:var(--gold)]">
+            Alto padrão • Transparência • Compromisso
+          </p>
+
+          <h1 class="font-brand mt-3 text-4xl md:text-5xl leading-tight">
+            Alto padrão com compromisso:
+            <span class="text-[color:var(--gold)]">cumprimos tudo o que prometemos.</span>
+          </h1>
+
+          <p class="mt-5 text-lg text-[color:var(--muted)] leading-relaxed">
+            Incorporação própria, obras sob medida e negociações flexíveis com <strong>permuta</strong>.
+            Um padrão único: excelência, previsibilidade e entrega honesta.
+          </p>
+
+          <div class="mt-7 flex flex-col sm:flex-row gap-3">
+            <button data-open-modal="true"
+               class="rounded-xl px-5 py-3 font-semibold bg-[color:var(--gold)] text-white text-center hover:opacity-95 transition">
+              Quero avaliar meu terreno (permuta)
+            </button>
+            <a href="#servicos"
+               class="rounded-xl px-5 py-3 font-semibold border border-[color:var(--line)] bg-white text-center hover:border-[color:var(--gold-soft)] transition">
+              Ver serviços
+            </a>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full border border-[color:var(--line)] bg-white">Incorporação Própria</span>
+            <span class="px-3 py-1 rounded-full border border-[color:var(--line)] bg-white">Obras para Terceiros</span>
+            <span class="px-3 py-1 rounded-full border border-[color:var(--line)] bg-white">Permutas (negociação flexível)</span>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-[color:var(--line)] shadow-sm bg-white">
+            <img src="assets/img/hero-fachada.jpg" alt="Fachada alto padrão" class="w-full h-full object-cover" />
+          </div>
+          <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl border border-[color:var(--line)] px-4 py-3 shadow-sm">
+            <p class="text-xs text-[color:var(--muted)]">Compromisso Borges</p>
+            <p class="text-sm font-semibold">Entrega com integridade e excelência</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVA / MANIFESTO -->
+    <section class="max-w-6xl mx-auto px-5 pb-14">
+      <div class="rounded-3xl border border-[color:var(--line)] bg-white p-7 md:p-10">
+        <p class="text-sm font-semibold text-[color:var(--gold)]">Nosso compromisso</p>
+        <p class="mt-2 text-xl md:text-2xl leading-relaxed">
+          Prometemos entregar apenas o que podemos cumprir — e cumprir tudo o que prometemos.
+        </p>
+        <div class="mt-6 grid sm:grid-cols-3 gap-4 text-sm text-[color:var(--muted)]">
+          <div class="rounded-2xl border border-[color:var(--line)] p-4">
+            <p class="font-semibold text-[color:var(--text)]">Transparência</p>
+            <p class="mt-1">Comunicação clara em todas as etapas.</p>
+          </div>
+          <div class="rounded-2xl border border-[color:var(--line)] p-4">
+            <p class="font-semibold text-[color:var(--text)]">Prazo</p>
+            <p class="mt-1">Planejamento e gestão com previsibilidade.</p>
+          </div>
+          <div class="rounded-2xl border border-[color:var(--line)] p-4">
+            <p class="font-semibold text-[color:var(--text)]">Alto padrão</p>
+            <p class="mt-1">Técnica, materiais e acabamento superiores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="max-w-6xl mx-auto px-5 pb-14">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="font-brand text-3xl">Quem é a Borges</h2>
+          <p class="mt-4 text-[color:var(--muted)] leading-relaxed">
+            A Borges atua com seriedade, transparência e alto padrão para transformar terrenos em patrimônio.
+            Em cada projeto, a entrega é guiada por compromisso e integridade.
+          </p>
+          <p class="mt-4 text-[color:var(--muted)] leading-relaxed">
+            Incorporação própria, obras sob medida e permutas estruturadas com racionalidade.
+          </p>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#portfolio"
+               class="rounded-xl px-5 py-3 font-semibold border border-[color:var(--line)] bg-white hover:border-[color:var(--gold-soft)] transition text-center">
+              Ver portfólio
+            </a>
+            <button data-open-modal="true"
+               class="rounded-xl px-5 py-3 font-semibold bg-[color:var(--gold)] text-white hover:opacity-95 transition text-center">
+              Falar com especialista
+            </button>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-[color:var(--line)] bg-white p-7">
+          <p class="text-sm font-semibold text-[color:var(--gold)]">Em uma frase</p>
+          <p class="mt-3 text-lg leading-relaxed">
+            “Mais que uma incorporadora: um símbolo de confiança e entrega honesta, pautado pela ética e pelo respeito.”
+          </p>
+          <div class="mt-6 border-t border-[color:var(--line)] pt-6 grid gap-4 text-sm">
+            <div class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-[color:var(--gold)]"></span>
+              <p><strong>Missão:</strong> construir com excelência, segurança, conforto e valorização.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-[color:var(--gold)]"></span>
+              <p><strong>Visão:</strong> referência em alto padrão e integridade nas relações.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="max-w-6xl mx-auto px-5 pb-14">
+      <h2 class="font-brand text-3xl">Serviços</h2>
+      <p class="mt-3 text-[color:var(--muted)]">Três frentes principais — com o mesmo padrão de entrega.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-5">
+        <article class="rounded-3xl border border-[color:var(--line)] bg-white p-7 hover:shadow-sm transition">
+          <p class="text-xs font-semibold tracking-wide text-[color:var(--gold)]">01</p>
+          <h3 class="mt-2 font-brand text-xl">Incorporação Própria</h3>
+          <p class="mt-3 text-sm text-[color:var(--muted)] leading-relaxed">
+            Imóveis projetados e construídos pela Borges: alto padrão, valorização e liquidez com estratégia.
+          </p>
+        </article>
+
+        <article class="rounded-3xl border border-[color:var(--line)] bg-white p-7 hover:shadow-sm transition">
+          <p class="text-xs font-semibold tracking-wide text-[color:var(--gold)]">02</p>
+          <h3 class="mt-2 font-brand text-xl">Obras para Terceiros</h3>
+          <p class="mt-3 text-sm text-[color:var(--muted)] leading-relaxed">
+            Construção sob medida com gestão, técnica e controle de qualidade do início à entrega.
+          </p>
+        </article>
+
+        <article class="rounded-3xl border border-[color:var(--line)] bg-white p-7 hover:shadow-sm transition">
+          <p class="text-xs font-semibold tracking-wide text-[color:var(--gold)]">03</p>
+          <h3 class="mt-2 font-brand text-xl">Permutas</h3>
+          <p class="mt-3 text-sm text-[color:var(--muted)] leading-relaxed">
+            Avaliação de terreno e estruturação de permutas com transparência e viabilidade real.
+          </p>
+        </article>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-5">
+        <div class="rounded-3xl overflow-hidden border border-[color:var(--line)] bg-white">
+          <img src="assets/img/permuta-acordo.jpg" alt="Negociação e permuta" class="h-56 w-full object-cover"/>
+          <div class="p-5">
+            <p class="font-semibold">Negociação flexível</p>
+            <p class="text-sm text-[color:var(--muted)] mt-1">Permuta estruturada com clareza e segurança.</p>
+          </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden border border-[color:var(--line)] bg-white">
+          <img src="assets/img/obra-canteiro.jpg" alt="Obra e engenharia" class="h-56 w-full object-cover"/>
+          <div class="p-5">
+            <p class="font-semibold">Execução profissional</p>
+            <p class="text-sm text-[color:var(--muted)] mt-1">Gestão e qualidade em todas as etapas.</p>
+          </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden border border-[color:var(--line)] bg-white">
+          <img src="assets/img/acabamento-detalhe.jpg" alt="Acabamento premium" class="h-56 w-full object-cover"/>
+          <div class="p-5">
+            <p class="font-semibold">Acabamento premium</p>
+            <p class="text-sm text-[color:var(--muted)] mt-1">Materiais e detalhes que elevam o padrão.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="max-w-6xl mx-auto px-5 pb-14">
+      <div class="rounded-3xl border border-[color:var(--line)] bg-white p-7 md:p-10">
+        <h2 class="font-brand text-3xl">Diferenciais</h2>
+        <p class="mt-3 text-[color:var(--muted)]">
+          Previsibilidade, técnica e integridade nas relações — do estudo do terreno à entrega.
+        </p>
+
+        <div class="mt-8 grid md:grid-cols-2 gap-5">
+          <div class="rounded-2xl border border-[color:var(--line)] p-6">
+            <h3 class="font-semibold">Permuta com inteligência</h3>
+            <p class="mt-2 text-sm text-[color:var(--muted)]">Modelos flexíveis com análise de viabilidade e transparência.</p>
+          </div>
+          <div class="rounded-2xl border border-[color:var(--line)] p-6">
+            <h3 class="font-semibold">Prazo com planejamento</h3>
+            <p class="mt-2 text-sm text-[color:var(--muted)]">Cronograma e acompanhamento para previsibilidade.</p>
+          </div>
+          <div class="rounded-2xl border border-[color:var(--line)] p-6">
+            <h3 class="font-semibold">Padrão construtivo superior</h3>
+            <p class="mt-2 text-sm text-[color:var(--muted)]">Materiais e execução que reduzem manutenção e aumentam valor.</p>
+          </div>
+          <div class="rounded-2xl border border-[color:var(--line)] p-6">
+            <h3 class="font-semibold">Transparência</h3>
+            <p class="mt-2 text-sm text-[color:var(--muted)]">Comunicação clara, decisões registradas e alinhamento constante.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section id="portfolio" class="max-w-6xl mx-auto px-5 pb-14">
+      <h2 class="font-brand text-3xl">Portfólio</h2>
+      <p class="mt-3 text-[color:var(--muted)]"></p>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-[color:var(--line)] bg-white">
+          <img src="assets/img/hero-fachada.jpg" alt="Fachadas" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-[color:var(--line)] bg-white">
+          <img src="assets/img/acabamento-detalhe.jpg" alt="Acabamentos" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-[color:var(--line)] bg-white">
+          <img src="assets/img/obra-canteiro.jpg" alt="Obras" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="max-w-6xl mx-auto px-5 pb-16">
+      <div class="rounded-3xl border border-[color:var(--line)] bg-white p-7 md:p-10">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="font-brand text-3xl">Vamos conversar?</h2>
+            <p class="mt-3 text-[color:var(--muted)] leading-relaxed">
+              Agende uma reunião técnica para falar sobre incorporação, obra sob medida ou avaliação de terreno para permuta.
+            </p>
+
+            <div class="mt-6 rounded-2xl border border-[color:var(--line)] p-4 text-sm">
+              <p class="font-semibold">Para avaliação de permuta, envie:</p>
+              <p class="mt-1 text-[color:var(--muted)]">Localização, metragem, documentação e zoneamento (se tiver).</p>
+            </div>
+
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="https://wa.me/5500000000000"
+                 class="rounded-xl px-5 py-3 font-semibold bg-[color:var(--gold)] text-white hover:opacity-95 transition text-center">
+                Falar no WhatsApp
+              </a>
+              <a href="mailto:contato@borgesincorporadora.com.br"
+                 class="rounded-xl px-5 py-3 font-semibold border border-[color:var(--line)] bg-white hover:border-[color:var(--gold-soft)] transition text-center">
+                Enviar e-mail
+              </a>
+            </div>
+
+            <div class="mt-4">
+              <button data-open-modal="true"
+                class="w-full sm:w-auto rounded-xl px-5 py-3 font-semibold border border-[color:var(--line)] bg-white hover:border-[color:var(--gold-soft)] transition text-center">
+                Ou preencher formulário
+              </button>
+            </div>
+
+            <p class="mt-6 text-xs text-[color:var(--muted)]">
+              
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-[color:var(--line)] p-6 bg-[color:var(--bg)]">
+            <p class="font-semibold">Formulário de contato</p>
+            <p class="text-sm text-[color:var(--muted)] mt-1">
+              Para contato preencha o formulário ou então nos envie uma mensagem no WhatsApp.
+            </p>
+            <button data-open-modal="true"
+              class="mt-4 w-full rounded-xl px-5 py-3 font-semibold bg-[color:var(--gold)] text-white hover:opacity-95 transition">
+              Abrir formulário
+            </button>
+            <p class="mt-3 text-xs text-[color:var(--muted)]">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-[color:var(--line)]">
+    <div class="max-w-6xl mx-auto px-5 py-8 text-sm text-[color:var(--muted)] flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+      <p>© <span id="year"></span> By  Frank. Todos os direitos reservados.</p>
+      <p class="text-xs">Identidade: alto padrão, transparência e compromisso.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const modal = document.getElementById("leadModal");
+    const openers = document.querySelectorAll('[data-open-modal="true"]');
+    const closeBtn = document.getElementById("closeModal");
+
+    function openModal() {
+      modal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    }
+    function closeModal() {
+      modal.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    openers.forEach(btn => btn.addEventListener("click", openModal));
+    closeBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (e) => {
+      if (e.target && e.target.dataset && e.target.dataset.close === "true") closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+    });
+  </script>
+</body>
+</html>
